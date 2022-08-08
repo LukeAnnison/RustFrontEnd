@@ -10,7 +10,7 @@ fn app() -> Html {
         value: 0 
     });
 
-    let onClick = {
+    let onclick = {
         let state = state.clone();
         
         Callback::from(move |_| {
@@ -22,7 +22,7 @@ fn app() -> Html {
  
     html! {
         <div>
-            <button {onClick}>
+            <button {onclick}>
                 { "+1" }
             </button>
             <p>{ state.value }</p>
